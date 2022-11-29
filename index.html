@@ -3,67 +3,78 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>A. Che</title>
   <link rel="stylesheet" href="cheport.css">
 </head>
 <body>
-  <nav>
-    <h1 class="logo">FAAC</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
   <header>
-    <div class="intro">
-    <h3>Hi</h3>
-    <h3>I AM CALLED AZIENWI CHE, I AM A SOFTWARE DEVELOPER.</h3></div>
+    <nav>
+     <a href="#logo"><h1 class="log">FAAC</h1></a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger">
+      <div class="bar"></div>
+    </button>
   </header>
-  <hr>
   <main>
-    <div class="column"><img src="images/logo2.jpg" alt="logo" width="250px" height="250px">
-    <p id="about">I am passionate about creating innovative software.<br> I am quite
+    <h3  id="logo">Hi there,
+    <br>I'm <span style="color: rgba(239, 159, 11, 0.936);">Azienwi Che</span><br></h3>
+    <p id="about">I am a software developer who's passionate about creating innovative software.<br> I am quite
     humorous, and an outgoing person.</p></div>
-  </main>
-  <hr>
+  <h4 id="services">What I offer...</h4>
   <section>
-    <h1 id="services">What I offer...</h1>
-    <br>
-    <h1>WEB DEVELOPMENT</h1>
-    <br>
-    <div class="webdev">
-      <img src="images/webdesign.jpg" alt="logo" width="250px" height="250px">
-      <div>
-      <p>With knowledge in the following languages: <br> 
-        <ul>
-          <li>Python</li>
-          <li>JavaScript</li>
-          <li>HTML and CSS</li>
-        </ul>
-      </p>
+    <div class="full">
+      <div class="webdev">
+        <div class="border">
+          <a href="https://www.techtarget.com/searchcloudcomputing/definition/web-application-development" target="_blank">
+            <img src="images/webdesign.jpg" alt="logo" width="323px" height="250px">
+          </a>
+          <a class="card-title" href="https://www.techtarget.com/searchcloudcomputing/definition/web-application-development" target="_blank">Web Development</a>
+          <p>With knowledge in the following languages: </p> 
+          <ul class="lang">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="appdev">
+        <div class="border">
+          <a href="https://www.techtarget.com/searchapparchitecture/definition/mobile-application-development" target="_blank">
+          <img src="images/appdev.png" alt="logo" width="350px" height="250px">
+          </a>
+          <a class="card-title" href="https://www.techtarget.com/searchapparchitecture/definition/mobile-application-development" target="_blank">App Development</a>
+          <p>With knowledge in the following languages:</p>
+          <ul class="lang">
+            <li>C/C++</li>
+            <li>Dart</li>
+          </ul>
+        </div>
       </div>
     </div>
-    <br><br>
-    <h1>APP DEVELOPMENT</h1>
-    <br><br>
-    <div class="appdev">
-      <div>
-      <p>With knowledge in the following languages: <br>
-        <ul>
-          <li>C/C++</li>
-          <li>Dart</li>
-        </ul>
-      </p>
-    </div>
-    <img src="images/appdev.png" alt="logo" width="250px" height="250px">
-    </div>
   </section>
+</main>
   <hr>
   <footer>
-    <p id="contact">Get to me using: <br>
-    <span>email:</span> alexche613@gmail.com <br>
-  <span>tel:</span> +237 654-490-031</p>
+    <h4>Contact me</h4>
+    <form>
+      <div>
+      <label for="name">Full Name:</label>
+      <input type="text" class="input">
+      <label for="email">Email: </label>
+      <input type="email" class="input">
+      <label for="message">Message: </label>
+      <textarea cols="6" rows="6" class="input" placeholder="Write your message"></textarea>
+      </div>
+      <div class="button">
+      <button id="btn">Let's talk</button>
+      </div>
+  </form>
   </footer>
 </body>
 </html>
