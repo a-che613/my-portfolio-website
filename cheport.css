@@ -18,27 +18,52 @@ body{
 
 header{
   width: 100%;
+  position: fixed;
 }
 
 h1.log {
   font-family: 'Covered By Your Grace', cursive;
   font-size: 30px;
+  color: black;
 }
 
 header nav{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background-color: rgba(239, 159, 11, 0.936);
-  position: static;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 10px 20px;
 }
 
-header nav ul{
+header ul{
   display: flex;
- 
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background: white;
+  height: 100vh;
+  width: 350px;
+  padding-top: 100px;
+  font-size: 24px;
+  gap: 20px;
+  z-index: 1000;
   list-style: none;
+  position: absolute;
+  transition: all 0.7s ease-in-out;
+  left: -100%;
+}
+
+header ul li a{
+  color: rgba(239, 159, 11, 0.936);
+}
+
+header ul.active {
+  left: 0;
+}
+
+.bx-menu {
+  font-size: 30px;
 }
 
 header nav ul li{
@@ -49,6 +74,20 @@ header nav ul li a{
   color: white;
 }
 
+.hamburger{
+  display: block;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+
+}
+
 main {
   padding: 20px;
 }
@@ -57,17 +96,21 @@ main h3, span {
   font-size: 48px;
   font-weight: 600;
   line-height: 65px;
+  padding-top: 70px;
 }
 
 main p {
   text-align: left;
 }
 
-#services{
+.bgc{
+  color: white;
+  padding: 10px 0;
   text-align: center;
-  padding-top: 20px;
   font-size: x-large;
   font-weight: 600;
+  background-color: rgba(239, 159, 11, 0.936);
+  margin: 10px 0;
 }
 
 .column{
@@ -125,7 +168,8 @@ a.card-title {
 }
 
 footer{
-  width: 100%;
+  /* width: 100%; */
+  padding: 20px;
 }
 
 footer form{
@@ -134,23 +178,33 @@ footer form{
  display: flex;
  flex-direction: column;
  padding: 20px;
- border: 1px solid black;
- border-radius: 50px;
+ border-radius: 20px;
  padding: 20px;
 }
 
 footer h4{
-  padding: 30px;
+  color: white;
+  padding: 10px 0;
   text-align: center;
   font-size: x-large;
   font-weight: 600;
-  color: rgba(239, 159, 11, 0.936);
+  background-color: rgba(239, 159, 11, 0.936);
+  margin: 10px 0;
 }
 
-form div{
+form {
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  gap: 10px;
+  background-color: rgba(245, 245, 245, 0.827);
+  border: none;
+  /* padding: 30px; */
+}
+
+form .frm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .input{
@@ -163,13 +217,14 @@ label{
 }
 
 .button{
-  margin: 1 auto;
   padding: 1px;
+  /* text-align: right; */
+  /* align-self: center; */
 }
 
 #btn{
   padding: 8px;
-  color: red;
+  color: rgba(239, 159, 11, 0.936);
   border-radius: 10px;
   font-size: 15px;
 }
@@ -195,7 +250,7 @@ label{
     padding: 0 100px;
   }
 
-  main{
+  main, footer{
     padding: 50px 100px ;
   }
 
@@ -224,7 +279,7 @@ label{
     padding: 20px 10px;
   }
 
-  main {
+  main, footer {
     padding: 40px;
   }
   
@@ -251,29 +306,15 @@ label{
     color:  black;
   }
 
-  footer form{
-    margin: 20 auto;
-    max-width: 600px;
-   display: flex;
-   flex-direction: column;
-   padding: 10px;
-   border: 1px solid black;
-   border-radius: 50px;
-   
-  }
   footer h4{
-    padding: 30px;
+    padding: 30 0px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
     font-size: x-large;
   }
-  form div{
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    width: 350px;
-    margin: 0 auto;
+  form {
+    padding: 10px 70px;
   }
 
   .input{
