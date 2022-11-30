@@ -5,27 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A. Che</title>
   <link rel="stylesheet" href="cheport.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <header>
     <nav>
      <a href="#logo"><h1 class="log">FAAC</h1></a>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      
+      <i class='bx bx-menu'></i>
+
+      
     </nav>
-    <button class="hamburger">
-      <div class="bar"></div>
-    </button>
+    <ul class="hiding-b">
+      <li ><a class="tog" href="#about">About</a></li>
+      <li><a class="tog" href="#services">Services</a></li>
+      <li><a class="tog" href="#contact">Contact</a></li>
+    </ul>
   </header>
   <main>
     <h3  id="logo">Hi there,
     <br>I'm <span style="color: rgba(239, 159, 11, 0.936);">Azienwi Che</span><br></h3>
     <p id="about">I am a software developer who's passionate about creating innovative software.<br> I am quite
     humorous, and an outgoing person.</p></div>
-  <h4 id="services">What I offer...</h4>
+  <h4 id="services" class="bgc">What I offer...</h4>
   <section>
     <div class="full">
       <div class="webdev">
@@ -59,22 +61,28 @@
     </div>
   </section>
 </main>
-  <hr>
   <footer>
-    <h4 id="contact">Contact me</h4>
+    <h4 id="contact" class="bgc">Contact me</h4>
     <form>
-      <div>
-      <label for="name">Full Name:</label>
-      <input type="text" class="input">
-      <label for="email">Email: </label>
-      <input type="email" class="input">
-      <label for="message">Message: </label>
-      <textarea cols="6" rows="6" class="input" placeholder="Write your message"></textarea>
+      <div class="frm">
+        <label for="name">Full Name:</label>
+        <input type="text" class="input">
+      </div>
+      <div class="frm">
+        <label for="email">Email: </label>
+        <input type="email" class="input">
+      </div>
+      <div class="frm">
+        <label for="message">Message: </label>
+        <textarea cols="6" rows="6" class="input" placeholder="Write your message"></textarea>
       </div>
       <div class="button">
-      <button id="btn">Let's talk</button>
+        <button id="btn">Let's talk</button>
       </div>
-  </form>
+    </form>
   </footer>
+
+
+  <script src="cheport.js"></script>
 </body>
 </html>
